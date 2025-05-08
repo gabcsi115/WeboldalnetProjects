@@ -1,0 +1,27 @@
+.ceg_title {
+    font-size: 40px;
+    margin-left: 80px;
+}
+
+
+.cegLogo_img {
+    width: 10%;
+    height: auto;
+    border-radius: 90%;
+}
+
+h2 {
+    margin-left: 80px;
+}
+
+ul {
+    margin-left: 100px;
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
