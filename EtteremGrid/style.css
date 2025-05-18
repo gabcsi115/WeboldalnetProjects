@@ -226,20 +226,20 @@ body, html {
 
 
 .friday_party {
-    background-image: url(/EtteremGrid/assets/party.jpg);
+    background-image: url(../EtteremGrid/assets/party.jpg);
 }
 
 .discount {
-    background-image: url(/EtteremGrid/assets/soup.jpg);
+    background-image: url(../EtteremGrid/assets/soup.jpg);
 }
 
 .french {
-    background-image: url(/EtteremGrid/assets/croissant.jpg);
+    background-image: url(../EtteremGrid/assets/croissant.jpg);
     grid-row: 1 / span 2;
 }
 
 .vip {
-    background-image: url(/EtteremGrid/assets/vip.png);
+    background-image: url(../EtteremGrid/assets/vip.png);
     grid-column: 2 / span 2;
 }
 
