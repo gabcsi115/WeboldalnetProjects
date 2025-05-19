@@ -1,16 +1,16 @@
 :root {
     --primary-color: #6366f1;
     --secondary-color: #4f46e5;
-    --card-radius: 24px;
 }
 
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    position: relative;
     overflow-x: hidden;
     padding: 4rem 0;
-    position: relative;
 }
+
 
 body::before {
     content: "";
@@ -23,139 +23,6 @@ body::before {
                 radial-gradient(circle at 90% 80%, rgba(97, 94, 240, 0.3) 0%, transparent 25%);
     pointer-events: none;
     z-index: 0;
-}
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    z-index: 1;
-    position: relative;
-}
-
-.card {
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 
-                0 25px 60px rgba(0, 0, 0, 0.2), 
-                0 0 40px rgba(99, 102, 241, 0.2);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: none;
-    margin: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    width: 350px; /* Nagyobb alapméret */
-    max-width: 100%;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    border-radius: var(--card-radius);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.card:hover {
-    transform: scale(1.08); /* Csak nagyítás, nincs felfelé mozgás */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
-                0 30px 70px rgba(0, 0, 0, 0.3), 
-                0 0 80px rgba(99, 102, 241, 0.5); /* Erősebb fényhatás */
-    z-index: 10; /* Előrébb hozza a kártyát */
-}
-
-.card-img-top {
-    height: 260px; /* Nagyobb képmagasság */
-    object-fit: cover;
-    transition: transform 0.6s;
-    position: relative;
-}
-
-.card:hover .card-img-top {
-    transform: scale(1.15); /* Erősebb nagyítás */
-}
-
-.card-body {
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    position: relative;
-    z-index: 2;
-    transition: all 0.4s ease;
-}
-
-.card:hover .card-body {
-    background: rgba(255, 255, 255, 0.95); /* Világosabb háttér hover állapotban */
-}
-
-.card-title {
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #1e293b;
-    font-size: 1.6rem; /* Nagyobb betűméret */
-    transition: all 0.4s ease;
-}
-
-.card:hover .card-title {
-    transform: scale(1.05); /* Címek kiemelése */
-    color: var(--primary-color); /* Címek színének változása */
-}
-
-.card-text {
-    color: #475569;
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem; /* Nagyobb szövegméret */
-    transition: all 0.4s ease;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border: none;
-    border-radius: 12px;
-    padding: 0.8rem 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: all 0.3s ease;
-    font-size: 1.1rem; /* Nagyobb gombszöveg */
-}
-
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
-    transition: all 0.4s ease;
-    z-index: -1;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
-}
-
-.btn-primary:hover {
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.6); /* Erősebb fényhatás */
-    transform: scale(1.05); /* Gomb nagyítása hover állapotban */
-}
-
-.animate__animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-.animate__fadeInUp {
-    animation-name: fadeInUp;
 }
 
 .glow {
@@ -178,13 +45,87 @@ body::before {
     right: 15%;
 }
 
-@media (max-width: 992px) {
-    .row {
-        flex-direction: column;
-        align-items: center;
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 
+                0 0 40px rgba(99, 102, 241, 0.4);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body {
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: #1e293b;
+    transition: color 0.3s;
+}
+
+.card:hover .card-title {
+    color: var(--primary-color);
+}
+
+.card-text {
+    color: #475569;
+    flex-grow: 1;
+}
+
+
+.btn-project {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    white-space: nowrap;
+    margin-top: auto;
+    color: white;
+}
+
+.btn-project:hover {
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.6);
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Reszponzív beállítások */
+@media (max-width: 1200px) {
+    .btn-project {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.9rem;
     }
-    .col-lg-4 {
-        width: 100%;
-        max-width: 400px;
+}
+
+@media (max-width: 992px) {
+    .card-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 200px;
     }
 }

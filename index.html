@@ -3,70 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autóbemutatók és Étterem</title>
+    <title>Projektek</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Glowing Background Elements -->
     <div class="glow glow-1"></div>
     <div class="glow glow-2"></div>
     
-    <!-- Main Content - Just Cards -->
-    <div class="container card-container">
-        <div class="row w-100 justify-content-center">
-            <!-- Audi Card -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.1s">
-                    <img src="" class="card-img-top" alt="Audi bemutató">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Audi Bemutató</h5>
-                        <p class="card-text">Fedezze fel a legújabb Audi modelleket és innovációkat.</p>
-                        <a href="AudiBemutato/html/index.html" class="btn btn-primary w-100">Megtekintés</a>
+    <div class="container py-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            
+            <div class="col">
+                <div class="card h-100 rounded-4 shadow animate__animated animate__fadeInUp" style="animation-delay: 0.1s">
+                    <img src="audib.png" class="card-img-top" alt="Audi bemutató">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h5 class="card-title fw-bold mb-3">Audi Bemutató</h5>
+                        <p class="card-text mb-4">Audi Bemutató HTML, CSS Projekt</p>
+                        <a href="AudiBemutato/html/index.html" class="btn btn-project rounded-3 py-2 fw-semibold mt-auto">Megtekintés</a>
                     </div>
                 </div>
             </div>
             
-            <!-- Mercedes Card -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
-                    <img src="" class="card-img-top" alt="Mercedes-Benz bemutató">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Mercedes-Benz Bemutató</h5>
-                        <p class="card-text">Ismerje meg a Mercedes-Benz legújabb luxusjárműveit.</p>
-                        <a href="MercedesFlex/index.html" class="btn btn-primary w-100">Megtekintés</a>
+            <div class="col">
+                <div class="card h-100 rounded-4 shadow animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
+                    <img src="mercedesb.png" class="card-img-top" alt="Mercedes-Benz bemutató">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h5 class="card-title fw-bold mb-3">Mercedes-Benz Bemutató</h5>
+                        <p class="card-text mb-4">Mercedes-benz Flexbox Projekt</p>
+                        <a href="MercedesFlex/index.html" class="btn btn-project rounded-3 py-2 fw-semibold mt-auto">Megtekintés</a>
                     </div>
                 </div>
             </div>
             
-            <!-- Restaurant Card -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.5s">
-                    <img src="" class="card-img-top" alt="Étterem">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Étterem</h5>
-                        <p class="card-text">Élvezze az ízletes fogásokat exkluzív éttermünkben.</p>
-                        <a href="EtteremGrid/index.html" class="btn btn-primary w-100">Megtekintés</a>
+            <div class="col">
+                <div class="card h-100 rounded-4 shadow animate__animated animate__fadeInUp" style="animation-delay: 0.5s">
+                    <img src="etteremb.png" class="card-img-top" alt="Étterem">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h5 class="card-title fw-bold mb-3">Étterem</h5>
+                        <p class="card-text mb-4">Étterem Grid Projekt.</p>
+                        <a href="EtteremGrid/index.html" class="btn btn-project rounded-3 py-2 fw-semibold mt-auto">Megtekintés</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Bootstrap Card -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.5s">
-                    <img src="" class="card-img-top" alt="Étterem">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Bootstrap</h5>
-                        <p class="card-text">Carousel, Grid, ...</p>
-                        <a href="Bootstrap_carousel/index.html" class="btn btn-primary w-100">Megtekintés</a>
+            
+            <div class="col">
+                <div class="card h-100 rounded-4 shadow animate__animated animate__fadeInUp" style="animation-delay: 0.7s">
+                    <img src="bootstrapb.png" class="card-img-top" alt="Bootstrap projekt">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h5 class="card-title fw-bold mb-3">Bootstrap</h5>
+                        <p class="card-text mb-4">Bootstrap Grid, Carousel, Collapse, Modal, Dropdown, Form Projekt</p>
+                        <a href="Bootstrap_carousel/index.html" class="btn btn-project rounded-3 py-2 fw-semibold mt-auto">Megtekintés</a>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
